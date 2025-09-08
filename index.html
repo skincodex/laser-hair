@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Hair Removal Contraindications Guide - NHS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Frutiger", Arial, sans-serif;
+            line-height: 1.6;
+            color: #212b32;
+            background-color: #f0f4f5;
+        }
+
+        .header {
+            background-color: #005eb8;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nhs-logo {
+            width: 60px;
+            height: 40px;
+            background-color: white;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #005eb8;
+            border-radius: 4px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .warning-banner {
+            background-color: #da291c;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .filter-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            background-color: #f0f4f5;
+            border: 2px solid #768692;
+            color: #212b32;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #005eb8;
+            border-color: #005eb8;
+            color: white;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            color: #005eb8;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f4f5;
+            cursor: pointer;
+            color: #005eb8;
+            font-weight: 500;
+        }
+
+        .category-list li:hover {
+            background-color: #f0f4f5;
+            padding-left: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .main-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .assessment-section {
+            border-left: 4px solid #005eb8;
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+            display: none;
+        }
+
+        .assessment-section.active {
+            display: block;
+        }
+
+        .assessment-section h4 {
+            color: #005eb8;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .contraindication-section {
+            margin-bottom: 25px;
+        }
+
+        .contraindication-section h5 {
+            background-color: #da291c;
+            color: white;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .absolute-contraindications h5 {
+            background-color: #da291c;
+        }
+
+        .relative-contraindications h5 {
+            background-color: #fd7e14;
+        }
+
+        .cautions h5 {
+            background-color: #ffc107;
+            color: #212b32;
+        }
+
+        .pre-treatment h5 {
+            background-color: #28a745;
+        }
+
+        .post-treatment h5 {
+            background-color: #6c757d;
+        }
+
+        .contraindication-list {
+            background-color: white;
+            border-radius: 4px;
+            padding: 15px;
+            border: 1px solid #e9ecef;
+        }
+
+        .contraindication-list ul {
+            margin-left: 20px;
+        }
+
+        .contraindication-list li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .severity-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .severity-high { background-color: #da291c; }
+        .severity-medium { background-color: #fd7e14; }
+        .severity-low { background-color: #ffc107; }
+
+        .clinical-note {
+            background-color: #e7f3ff;
+            border-left: 4px solid #005eb8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .clinical-note-title {
+            font-weight: 600;
+            color: #005eb8;
+            margin-bottom: 5px;
+        }
+
+        .laser-specs {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .laser-specs h5 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .fitzpatrick-scale {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .skin-type {
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            font-size: 12px;
+        }
+
+        .skin-type-1 { background-color: #ffeaa7; }
+        .skin-type-2 { background-color: #fdcb6e; }
+        .skin-type-3 { background-color: #e17055; }
+        .skin-type-4 { background-color: #d63031; }
+        .skin-type-5 { background-color: #a29bfe; }
+        .skin-type-6 { background-color: #6c5ce7; color: white; }
+
+        .hair-type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .hair-type {
+            background-color: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            font-size: 13px;
+        }
+
+        .hair-dark { border-color: #28a745; background-color: #d4edda; }
+        .hair-brown { border-color: #fd7e14; background-color: #fff3cd; }
+        .hair-blonde { border-color: #ffc107; background-color: #fff3cd; }
+        .hair-red { border-color: #dc3545; background-color: #f8d7da; }
+        .hair-grey { border-color: #6c757d; background-color: #e9ecef; }
+        .hair-white { border-color: #adb5bd; background-color: #f8f9fa; }
+
+        .legend {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .legend h3 {
+            color: #005eb8;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .emergency-contact {
+            background-color: #da291c;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .emergency-contact h3 {
+            margin-bottom: 10px;
+        }
+
+        .emergency-number {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .checklist {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .checklist-title {
+            font-weight: 600;
+            color: #155724;
+            margin-bottom: 10px;
+        }
+
+        .checklist ul {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .filter-buttons {
+                justify-content: center;
+            }
+            
+            .legend-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .fitzpatrick-scale {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="nhs-logo">NHS</div>
+            <h1>Laser Hair Removal Contraindications Guide</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="warning-banner">
+            ⚠️ CRITICAL SAFETY NOTICE: This guide is for qualified practitioners only. Always conduct thorough patient assessment and obtain appropriate medical clearance before proceeding with laser hair removal treatments.
+        </div>
+
+        <div class="filter-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Categories</button>
+                <button class="filter-btn" data-category="medical">Medical Conditions</button>
+                <button class="filter-btn" data-category="skin">Skin & Hair Assessment</button>
+                <button class="filter-btn" data-category="medication">Medications</button>
+                <button class="filter-btn" data-category="lifestyle">Lifestyle Factors</button>
+                <button class="filter-btn" data-category="anatomical">Anatomical Areas</button>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="sidebar">
+                <h3>Assessment Categories</h3>
+                <ul class="category-list">
+                    <li data-section="medical">Medical Contraindications</li>
+                    <li data-section="skin">Skin & Hair Type Assessment</li>
+                    <li data-section="medications">Medication Review</li>
+                    <li data-section="hormonal">Hormonal Conditions</li>
+                    <li data-section="pregnancy">Pregnancy & Breastfeeding</li>
+                    <li data-section="anatomical">Anatomical Considerations</li>
+                    <li data-section="lifestyle">Lifestyle Factors</li>
+                    <li data-section="aftercare">Post-Treatment Care</li>
+                    <li data-section="consent">Informed Consent</li>
+                </ul>
+            </div>
+
+            <div class="main-content" id="mainContent">
+                <div class="assessment-section active medical" data-section="medical">
+                    <h4>Comprehensive Medical Contraindications Assessment</h4>
+                    
+                    <div class="contraindication-section absolute-contraindications">
+                        <h5>DERMATOLOGICAL CONDITIONS - ABSOLUTE CONTRAINDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Active Skin Malignancies:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Basal cell carcinoma (in treatment area)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Squamous cell carcinoma</li>
+                                        <li><span class="severity-indicator severity-high"></span>Malignant melanoma</li>
+                                        <li><span class="severity-indicator severity-high"></span>Atypical moles/dysplastic nevi</li>
+                                        <li><span class="severity-indicator severity-high"></span>Cutaneous lymphoma</li>
+                                        <li><span class="severity-indicator severity-medium"></span>History of skin cancer in treatment area</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Active Infections:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Bacterial folliculitis</li>
+                                        <li><span class="severity-indicator severity-high"></span>Fungal infections (tinea)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Active herpes simplex (HSV)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Impetigo</li>
+                                        <li><span class="severity-indicator severity-high"></span>Cellulitis</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent infection (&lt;2 weeks)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Inflammatory Skin Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Active psoriasis (in treatment area)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Active eczema/dermatitis</li>
+                                        <li><span class="severity-indicator severity-high"></span>Lichen planus</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Seborrheic dermatitis</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Contact dermatitis</li>
+                                        <li><span class="severity-indicator severity-high"></span>Hidradenitis suppurativa</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section absolute-contraindications">
+                        <h5>AUTOIMMUNE & CONNECTIVE TISSUE DISORDERS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Autoimmune Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Systemic lupus erythematosus</li>
+                                        <li><span class="severity-indicator severity-high"></span>Discoid lupus erythematosus</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Sjögren's syndrome</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Rheumatoid arthritis (active)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Dermatomyositis</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Systemic sclerosis</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Photosensitive Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Xeroderma pigmentosum</li>
+                                        <li><span class="severity-indicator severity-high"></span>Porphyria cutanea tarda</li>
+                                        <li><span class="severity-indicator severity-high"></span>Polymorphic light eruption</li>
+                                        <li><span class="severity-indicator severity-high"></span>Solar urticaria</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Chronic actinic dermatitis</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Scarring Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Keloid scarring history</li>
+                                        <li><span class="severity-indicator severity-high"></span>Hypertrophic scarring tendency</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Poor wound healing history</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Ehlers-Danlos syndrome</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>VASCULAR & CIRCULATORY CONDITIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Vascular Malformations:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Arteriovenous malformations</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Port-wine stains</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Hemangiomas</li>
+                                        <li><span class="severity-indicator severity-low"></span>Spider veins</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Venous lakes</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Circulation Issues:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Severe peripheral arterial disease</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Chronic venous insufficiency</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Lymphedema</li>
+                                        <li><span class="severity-indicator severity-low"></span>Raynaud's phenomenon</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Bleeding Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Hemophilia</li>
+                                        <li><span class="severity-indicator severity-high"></span>von Willebrand disease</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Thrombocytopenia</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Anticoagulant therapy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>NEUROLOGICAL CONDITIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Seizure Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Photosensitive epilepsy</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Uncontrolled epilepsy</li>
+                                        <li><span class="severity-indicator severity-low"></span>Well-controlled epilepsy</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent seizure activity (&lt;6 months)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Sensory Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Diabetic neuropathy</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Peripheral neuropathy</li>
+                                        <li><span class="severity-indicator severity-low"></span>Decreased sensation in treatment area</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>IMPLANTS & DEVICES</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Electronic Devices:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Pacemaker (within 30cm)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Implantable defibrillator</li>
+                                        <li><span class="severity-indicator severity-low"></span>Insulin pump</li>
+                                        <li><span class="severity-indicator severity-low"></span>Cochlear implant</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Metal Implants:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Titanium implants</li>
+                                        <li><span class="severity-indicator severity-low"></span>Surgical clips/pins</li>
+                                        <li><span class="severity-indicator severity-low"></span>Dental implants</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Ferromagnetic materials</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Cosmetic Implants:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Silicone implants</li>
+                                        <li><span class="severity-indicator severity-low"></span>Dermal fillers</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Permanent makeup/tattoos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="laser-specs">
+                        <h5>Medical Assessment Protocol</h5>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                            <ol style="margin-left: 20px; line-height: 1.8;">
+                                <li><strong>Comprehensive Medical History:</strong> Review all current and past medical conditions</li>
+                                <li><strong>Current Medications:</strong> Document all prescription and OTC medications</li>
+                                <li><strong>Previous Treatments:</strong> Assess prior hair removal methods and reactions</li>
+                                <li><strong>Skin Examination:</strong> Visual inspection of treatment areas</li>
+                                <li><strong>Risk Assessment:</strong> Evaluate cumulative risk factors</li>
+                                <li><strong>Specialist Consultation:</strong> Obtain clearance for complex conditions</li>
+                                <li><strong>Documentation:</strong> Record all findings and decisions</li>
+                                <li><strong>Informed Consent:</strong> Ensure patient understanding of risks</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="clinical-note">
+                        <div class="clinical-note-title">Assessment Guidelines:</div>
+                        Always perform patch testing for uncertain cases. Consider cumulative risk when multiple conditions are present. Document decision rationale for all medium and high-risk cases. Obtain specialist medical clearance when in doubt.
+                    </div>
+                </div>
+
+                <div class="assessment-section skin" data-section="skin">
+                    <h4>Skin & Hair Type Assessment</h4>
+                    
+                    <div class="fitzpatrick-scale">
+                        <div class="skin-type skin-type-1">
+                            <strong>Type I</strong><br>
+                            Always burns<br>
+                            Never tans<br>
+                            <small>Excellent response</small>
+                        </div>
+                        <div class="skin-type skin-type-2">
+                            <strong>Type II</strong><br>
+                            Always burns<br>
+                            Minimal tan<br>
+                            <small>Excellent response</small>
+                        </div>
+                        <div class="skin-type skin-type-3">
+                            <strong>Type III</strong><br>
+                            Sometimes burns<br>
+                            Gradual tan<br>
+                            <small>Good response</small>
+                        </div>
+                        <div class="skin-type skin-type-4">
+                            <strong>Type IV</strong><br>
+                            Minimal burning<br>
+                            Always tans<br>
+                            <small>Modified parameters</small>
+                        </div>
+                        <div class="skin-type skin-type-5">
+                            <strong>Type V</strong><br>
+                            Rarely burns<br>
+                            Tans easily<br>
+                            <small>Careful parameters</small>
+                        </div>
+                        <div class="skin-type skin-type-6">
+                            <strong>Type VI</strong><br>
+                            Never burns<br>
+                            Deep pigmentation<br>
+                            <small>High risk</small>
+                        </div>
+                    </div>
+
+                    <div class="laser-specs">
+                        <h5>Hair Color & Response to Treatment</h5>
+                        <div class="hair-type-grid">
+                            <div class="hair-type hair-dark">
+                                <strong>Dark Brown/Black</strong><br>
+                                High melanin content<br>
+                                <small><strong>Excellent</strong> response</small>
+                            </div>
+                            <div class="hair-type hair-brown">
+                                <strong>Medium Brown</strong><br>
+                                Moderate melanin<br>
+                                <small><strong>Good</strong> response</small>
+                            </div>
+                            <div class="hair-type hair-blonde">
+                                <strong>Light Brown/Blonde</strong><br>
+                                Low melanin content<br>
+                                <small><strong>Poor</strong> response</small>
+                            </div>
+                            <div class="hair-type hair-red">
+                                <strong>Red Hair</strong><br>
+                                Pheomelanin dominant<br>
+                                <small><strong>Variable</strong> response</small>
+                            </div>
+                            <div class="hair-type hair-grey">
+                                <strong>Grey Hair</strong><br>
+                                Reduced melanin<br>
+                                <small><strong>Poor</strong> response</small>
+                            </div>
+                            <div class="hair-type hair-white">
+                                <strong>White Hair</strong><br>
+                                No melanin content<br>
+                                <small><strong>No</strong> response</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section cautions">
+                        <h5>SKIN & HAIR ASSESSMENT FACTORS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Recent Sun Exposure:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Active sunburn</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recent tanning (within 4 weeks)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Self-tanning products (within 2 weeks)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Minimal sun exposure history</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Hair Characteristics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Blonde/white/grey hair</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Very fine or downy hair</li>
+                                        <li><span class="severity-indicator severity-low"></span>Coarse, dark hair</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Recently plucked/waxed hair</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Skin Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Hyperpigmentation in treatment area</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Multiple moles/freckles</li>
+                                        <li><span class="severity-indicator severity-low"></span>Dry or sensitive skin</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Previous skin reactions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clinical-note">
+                        <div class="clinical-note-title">Assessment Protocol:</div>
+                        Assess both skin and hair type before treatment. Skin types IV-VI require modified laser parameters. Hair with low melanin content may not respond to treatment. Always perform patch testing for uncertain cases or skin types IV-VI.
+                    </div>
+                </div>
+
+                <div class="assessment-section medication" data-section="medications">
+                    <h4>Comprehensive Medication Review</h4>
+                    
+                    <div class="contraindication-section absolute-contraindications">
+                        <h5>HIGH RISK PHOTOSENSITIZING MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Tetracycline Antibiotics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Doxycycline</li>
+                                        <li><span class="severity-indicator severity-high"></span>Minocycline</li>
+                                        <li><span class="severity-indicator severity-high"></span>Tetracycline</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Oxytetracycline</li>
+                                    </ul>
+                                    <small style="color: #dc3545;"><strong>Discontinue:</strong> 4-6 weeks before treatment</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Fluoroquinolones:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Ciprofloxacin</li>
+                                        <li><span class="severity-indicator severity-high"></span>Levofloxacin</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Ofloxacin</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Norfloxacin</li>
+                                    </ul>
+                                    <small style="color: #dc3545;"><strong>Discontinue:</strong> 2-3 weeks before treatment</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Systemic Retinoids:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Isotretinoin (Roaccutane)</li>
+                                        <li><span class="severity-indicator severity-high"></span>Acitretin</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Alitretinoin</li>
+                                    </ul>
+                                    <small style="color: #dc3545;"><strong>Discontinue:</strong> 6-12 months before treatment</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>ANTI-INFLAMMATORY & PAIN MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>NSAIDs:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Ibuprofen</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Naproxen</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Diclofenac</li>
+                                        <li><span class="severity-indicator severity-high"></span>Piroxicam</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Consider:</strong> Discontinue 48-72 hours before</small>
+                                </div>
+                                
+                                <div>
+                                    <strong>Topical Treatments:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Tretinoin (Retin-A)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Adapalene</li>
+                                        <li><span class="severity-indicator severity-low"></span>Benzoyl peroxide</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Alpha hydroxy acids</li>
+                                    </ul>
+                                    <small style="color: #fd7e14;"><strong>Discontinue:</strong> 2-4 weeks in treatment area</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section cautions">
+                        <h5>CARDIOVASCULAR & DIURETIC MEDICATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Thiazide Diuretics:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Hydrochlorothiazide</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Chlorthalidone</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Indapamide</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Other Cardiovascular:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Amiodarone</li>
+                                        <li><span class="severity-indicator severity-low"></span>ACE inhibitors</li>
+                                        <li><span class="severity-indicator severity-low"></span>Beta blockers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section cautions">
+                        <h5>HERBAL SUPPLEMENTS & NATURAL PRODUCTS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Photosensitizing Herbs:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>St John's Wort</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Dong Quai</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Lime/Bergamot oil</li>
+                                        <li><span class="severity-indicator severity-low"></span>Fennel supplements</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Other Supplements:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>High-dose Vitamin E</li>
+                                        <li><span class="severity-indicator severity-low"></span>Beta-carotene</li>
+                                        <li><span class="severity-indicator severity-low"></span>Fish oil (high doses)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clinical-note">
+                        <div class="clinical-note-title">Medication Assessment Protocol:</div>
+                        Always obtain complete medication history including OTC drugs and supplements. Never advise discontinuation of prescribed medications without prescriber consultation. Document all medications and photosensitivity risks assessed.
+                    </div>
+                </div>
+
+                <div class="assessment-section" data-section="hormonal">
+                    <h4>Hormonal Conditions & Hair Growth Disorders</h4>
+                    
+                    <div class="contraindication-section relative-contraindications">
+                        <h5>HORMONAL DISORDERS AFFECTING HAIR GROWTH</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Androgen-Related Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Polycystic ovary syndrome (PCOS)</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Hirsutism</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Congenital adrenal hyperplasia</li>
+                                        <li><span class="severity-indicator severity-low"></span>Androgen therapy</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Thyroid Disorders:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Hypothyroidism</li>
+                                        <li><span class="severity-indicator severity-low"></span>Hyperthyroidism</li>
+                                        <li><span class="severity-indicator severity-low"></span>Hashimoto's thyroiditis</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Other Conditions:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Menopause/perimenopause</li>
+                                        <li><span class="severity-indicator severity-low"></span>Hormonal contraceptive use</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Cushing's syndrome</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clinical-note">
+                        <div class="clinical-note-title">Hormonal Assessment Considerations:</div>
+                        Hormonal conditions may cause ongoing hair growth, requiring more treatments or maintenance sessions. Consider treating underlying hormonal imbalance before starting laser hair removal for optimal results.
+                    </div>
+                </div>
+
+                <div class="assessment-section" data-section="pregnancy">
+                    <h4>Pregnancy & Breastfeeding Assessment</h4>
+                    
+                    <div class="contraindication-section absolute-contraindications">
+                        <h5>PREGNANCY STATUS - ABSOLUTE CONTRAINDICATION</h5>
+                        <div class="contraindication-list">
+                            <ul>
+                                <li><span class="severity-indicator severity-high"></span>Confirmed pregnancy (any trimester)</li>
+                                <li><span class="severity-indicator severity-high"></span>Suspected pregnancy</li>
+                                <li><span class="severity-indicator severity-high"></span>Trying to conceive</li>
+                                <li><span class="severity-indicator severity-medium"></span>Breastfeeding (relative contraindication)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="clinical-note">
+                        <div class="clinical-note-title">Pregnancy Protocol:</div>
+                        Always verify pregnancy status before each treatment session. Pregnancy test may be required if menstrual period is late. Treatment should be postponed until after pregnancy and ideally after breastfeeding completion.
+                    </div>
+                </div>
+
+                <div class="assessment-section anatomical" data-section="anatomical">
+                    <h4>Anatomical Area Considerations</h4>
+                    
+                    <div class="contraindication-section cautions">
+                        <h5>SPECIAL ANATOMICAL CONSIDERATIONS</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Facial Areas:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Close to eyes (safety glasses required)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Upper lip</li>
+                                        <li><span class="severity-indicator severity-low"></span>Chin and jawline</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Around nose (careful positioning)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Genital Areas:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Bikini line</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Brazilian area</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Male genital area</li>
+                                        <li><span class="severity-indicator severity-high"></span>Internal mucous membranes</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Other Sensitive Areas:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Underarms</li>
+                                        <li><span class="severity-indicator severity-low"></span>Legs and arms</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Neck area</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Areas with thin skin</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clinical-note">
+                        <div class="clinical-note-title">Anatomical Assessment:</div>
+                        Different body areas require different laser parameters and safety precautions. Always use appropriate eye protection for facial treatments. Exercise extra caution around sensitive and intimate areas.
+                    </div>
+                </div>
+
+                <div class="assessment-section lifestyle" data-section="lifestyle">
+                    <h4>Lifestyle & Environmental Factors</h4>
+                    
+                    <div class="contraindication-section cautions">
+                        <h5>LIFESTYLE ASSESSMENT</h5>
+                        <div class="contraindication-list">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                <div>
+                                    <strong>Sun Exposure:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-high"></span>Recent sunbathing</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Planned sun holidays</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Occupational sun exposure</li>
+                                        <li><span class="severity-indicator severity-low"></span>Regular sunscreen use</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>Hair Removal History:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-medium"></span>Recent waxing/plucking (&lt;6 weeks)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Shaving only</li>
+                                        <li><span class="severity-indicator severity-medium"></span>Electrolysis history</li>
+                                        <li><span class="severity-indicator severity-low"></span>Previous laser treatments</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <strong>General Health Factors:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 8px;">
+                                        <li><span class="severity-indicator severity-low"></span>Smoking (impairs healing)</li>
+                                        <li><span class="severity-indicator severity-low"></span>Poor nutrition</li>
+                                        <li><span class="severity-indicator severity-low"></span>High stress levels</li>
+                                        <li><span class="severity-indicator severity-low"></span>Inadequate sleep</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist">
+                        <div class="checklist-title">Pre-Treatment Lifestyle Requirements:</div>
+                        <ul>
+                            <li>No sun exposure 4-6 weeks before treatment</li>
+                            <li>Stop waxing/plucking 6 weeks before treatment</li>
+                            <li>Shave treatment area 24-48 hours before appointment</li>
+                            <li>Discontinue self-tanning products 2 weeks prior</li>
+                            <li>Stay well-hydrated before treatment</li>
+                            <li>Avoid alcohol 24 hours before treatment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="assessment-section" data-section="aftercare">
+                    <h4>Post-Treatment Care Requirements</h4>
+                    
+                    <div class="contraindication-section pre-treatment">
+                        <h5>IMMEDIATE POST-TREATMENT CARE (0-24 HOURS)</h5>
+                        <div class="contraindication-list">
+                            <ul>
+                                <li>Apply cold compress to reduce inflammation</li>
+                                <li>Keep treatment area clean and dry</li>
+                                <li>Apply prescribed soothing gel/cream</li>
+                                <li>Avoid hot showers, baths, or saunas</li>
+                                <li>No vigorous exercise or sweating</li>
+                                <li>Avoid tight-fitting clothing over treated areas</li>
+                                <li>No picking or scratching treated area</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section post-treatment">
+                        <h5>ONGOING AFTERCARE (1-6 WEEKS)</h5>
+                        <div class="contraindication-list">
+                            <ul>
+                                <li>Strict sun avoidance for 6 weeks</li>
+                                <li>Use SPF 30+ sunscreen daily</li>
+                                <li>Gentle exfoliation after 1 week</li>
+                                <li>Moisturize treated areas regularly</li>
+                                <li>Shave only - no waxing or plucking</li>
+                                <li>Avoid swimming pools/hot tubs for 48-72 hours</li>
+                                <li>Monitor for signs of infection or adverse reactions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contraindication-section post-treatment">
+                        <h5>WARNING SIGNS - SEEK IMMEDIATE MEDICAL ATTENTION</h5>
+                        <div class="contraindication-list">
+                            <ul>
+                                <li>Signs of infection (pus, increasing redness, fever)</li>
+                                <li>Severe or worsening pain after 48 hours</li>
+                                <li>Unexpected blistering or crusting</li>
+                                <li>Severe allergic reaction symptoms</li>
+                                <li>Significant pigmentary changes</li>
+                                <li>Scarring or textural changes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="assessment-section" data-section="consent">
+                    <h4>Informed Consent Requirements</h4>
+                    
+                    <div class="checklist">
+                        <div class="checklist-title">Essential Consent Elements:</div>
+                        <ul>
+                            <li>Nature of laser hair removal procedure explained</li>
+                            <li>Expected treatment course and number of sessions</li>
+                            <li>Potential risks and complications outlined</li>
+                            <li>Realistic expectations regarding results</li>
+                            <li>Alternative hair removal methods discussed</li>
+                            <li>Cost structure and payment terms agreed</li>
+                            <li>Pre and post-treatment instructions provided</li>
+                            <li>Photography consent obtained if applicable</li>
+                            <li>Right to withdraw consent acknowledged</li>
+                            <li>Emergency contact procedures explained</li>
+                        </ul>
+                    </div>
+
+                    <div class="laser-specs">
+                        <h5>Key Discussion Points for Informed Consent</h5>
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                            <ul style="margin-left: 20px; line-height: 1.8;">
+                                <li><strong>Treatment Effectiveness:</strong> Results vary based on hair and skin type</li>
+                                <li><strong>Number of Sessions:</strong> Typically 6-8 treatments, may require maintenance</li>
+                                <li><strong>Discomfort Level:</strong> Mild to moderate discomfort expected</li>
+                                <li><strong>Potential Side Effects:</strong> Redness, swelling, pigmentation changes</li>
+                                <li><strong>Rare Complications:</strong> Burns, scarring, permanent pigmentation changes</li>
+                                <li><strong>Financial Commitment:</strong> Multiple sessions required for optimal results</li>
+                                <li><strong>Lifestyle Requirements:</strong> Sun avoidance and specific aftercare protocols</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="clinical-note">
+                        <div class="clinical-note-title">Documentation Requirements:</div>
+                        Maintain comprehensive records including medical history, assessment findings, treatment parameters, informed consent documentation, and progress notes. Ensure all documentation meets professional and regulatory standards.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h3>Risk Classification & Assessment Legend</h3>
+            <div class="legend-grid">
+                <div class="legend-item">
+                    <span class="severity-indicator severity-high"></span>
+                    <span><strong>High Risk:</strong> Absolute contraindication - Do not treat</span>
+                </div>
+                <div class="legend-item">
+                    <span class="severity-indicator severity-medium"></span>
+                    <span><strong>Medium Risk:</strong> Relative contraindication - Specialist consultation required</span>
+                </div>
+                <div class="legend-item">
+                    <span class="severity-indicator severity-low"></span>
+                    <span><strong>Low Risk:</strong> Caution advised - Monitor closely and modify parameters</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency-contact">
+            <h3>Emergency Contacts</h3>
+            <div class="emergency-number">NHS 111</div>
+            <p>For urgent medical advice when it's not life-threatening</p>
+            <br>
+            <div class="emergency-number">999</div>
+            <p>For life-threatening emergencies or severe adverse reactions</p>
+            <br>
+            <p><strong>Report adverse incidents to MHRA Yellow Card Scheme</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Filter by category
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const assessmentSections = document.querySelectorAll('.assessment-section');
+        const categoryList = document.querySelectorAll('.category-list li');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                
+                assessmentSections.forEach(section => {
+                    if (category === 'all' || section.classList.contains(category)) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Sidebar navigation
+        categoryList.forEach(item => {
+            item.addEventListener('click', function() {
+                const sectionName = this.dataset.section;
+                
+                // Hide all sections
+                assessmentSections.forEach(section => {
+                    section.classList.remove('active');
+                    section.style.display = 'none';
+                });
+                
+                // Show selected section
+                const selectedSection = document.querySelector(`.assessment-section[data-section="${sectionName}"]`);
+                
+                if (selectedSection) {
+                    selectedSection.classList.add('active');
+                    selectedSection.style.display = 'block';
+                } else {
+                    assessmentSections[0].classList.add('active');
+                    assessmentSections[0].style.display = 'block';
+                }
+                
+                // Reset filters
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                filterButtons[0].classList.add('active');
+                
+                // Highlight selected category in sidebar
+                categoryList.forEach(li => li.style.backgroundColor = '');
+                this.style.backgroundColor = '#e7f3ff';
+            });
+        });
+
+        // Initialize - show first section by default
+        assessmentSections[0].style.display = 'block';
+        
+        // Add hover effects for interactive elements
+        document.querySelectorAll('.contraindication-list li').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#f8f9fa';
+                this.style.paddingLeft = '10px';
+                this.style.transition = 'all 0.2s ease';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+                this.style.paddingLeft = '';
+            });
+        });
+
+        // Add accessibility features
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.setAttribute('role', 'button');
+            btn.setAttribute('tabindex', '0');
+            
+            btn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Add tooltips for severity indicators
+        document.querySelectorAll('.severity-indicator').forEach(indicator => {
+            const severity = indicator.classList.contains('severity-high') ? 'High Risk' :
+                           indicator.classList.contains('severity-medium') ? 'Medium Risk' : 'Low Risk';
+            indicator.setAttribute('title', severity);
+            indicator.style.cursor = 'help';
+        });
+
+        console.log('Laser Hair Removal Contraindications Guide initialized');
+    </script>
+</body>
+</html>
